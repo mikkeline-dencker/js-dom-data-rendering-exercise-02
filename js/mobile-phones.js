@@ -45,4 +45,88 @@ const mobilePhones = [
     memory: "256 GB",
     img: "img/iphone-17-pro-max-256-black.webp",
   },
+  {
+    id: 6,
+    brandname: "OnePlus",
+    brandmodel: "OnePlus 11 5G",
+    color: "titan black",
+    price: 5499,
+    memory: "128 GB",
+    img: "img/oneplus-11-5G-128-titan-black.webp",
+  },
+  {
+    id: 7,
+    brandname: "OnePlus",
+    brandmodel: "OnePlus 15",
+    color: "infinite black",
+    price: 6499,
+    memory: "256 GB",
+    img: "img/oneplus-15-256-infinite-black.webp",
+  },
+  {
+    id: 8,
+    brandname: "Samsung",
+    brandmodel: "Samsung S25",
+    color: "navy",
+    price: 4999,
+    memory: "128 GB",
+    img: "img/samsung-s25-128-navy.webp",
+  },
+  {
+    id: 9,
+    brandname: "Samsung",
+    brandmodel: "Samsung S25",
+    color: "blueblack",
+    price: 5999,
+    memory: "256 GB",
+    img: "img/samsung-s25-256-blueblack.webp",
+  },
+  {
+    id: 10,
+    brandname: "Samsung",
+    brandmodel: "Samsung S26",
+    color: "black",
+    price: 6999,
+    memory: "256 GB",
+    img: "img/samsung-s26-256-black.webp",
+  },
+  {
+    id: 11,
+    brandname: "Samsung",
+    brandmodel: "Samsung S26 Ultra",
+    color: "black",
+    price: 7499,
+    memory: "256 GB",
+    img: "img/samsung-s26-ultra-256-black.webp",
+  },
 ];
+
+const phonesContainer = document.querySelector("#phones-container");
+
+function displayPhones(phoneList) {
+  // Jeg tømmer containeren
+  phonesContainer.innerHTML = "";
+
+  // Jeg gennemgår alle telefoner
+  phoneList.forEach((phone) => {
+    phonesContainer.innerHTML += `
+      <article>
+        <h2>${phone.brandname}</h2>
+        <h4>${phone.brandmodel}</h4>
+        <ul>
+          <li>${phone.color}</li>
+          <li>${phone.memory}</li>
+          <li>${phone.price}</li>
+        </ul>
+
+        <figure>
+          <img src="${phone.img}" alt="${phone.brandmodel}">
+          <figcaption>${phone.brandmodel}</figcaption>
+        </figure>
+      </article>
+    `;
+  });
+}
+  displayPhones(mobilePhones);
+
+
