@@ -1,12 +1,45 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Overskrift */
+h1 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Container med Flexbox */
+#phones-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Telefon-kort */
+article {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+}
+
+/* Billede */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Luft i liste */
+ul {
+  padding-left: 15px;
+}
